@@ -15,6 +15,15 @@ The server listens on `localhost:4221`.
 curl -i localhost:4221/echo/banana
 ```
 
+## Tests
+
+```sh
+uv run -m unittest discover
+```
+
+Standard library `unittest`, no test dependencies. `tests/test_server.py` and
+`tests/test_routes_end_to_end.py` exercise a real server over a real TCP socket.
+
 ## Routes
 
 | Path          | Response                                    |
